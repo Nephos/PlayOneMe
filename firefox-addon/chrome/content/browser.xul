@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://playoneme/skin/skin.css" type="text/css"?>
+<!DOCTYPE playoneme SYSTEM "chrome://playoneme/locale/translations.dtd">
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="PlayOneMe.js" />
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem label="&runplayoneme;" key="play-one-me-run-key" oncommand="PlayOneMe.run()"/>
+  </menupopup>
+
+  <keyset>
+    <key id="play-one-me-run-key" modifiers="accel shift" key="L" oncommand="PlayOneMe.run()"/>
+  </keyset>
+
+  <statusbar id="status-bar">
+    <statusbarpanel id="play-one-me-status-bar-icon" class="statusbarpanel-iconic" src="chrome://playoneme/skin/status-bar.png" tooltiptext="&runplayoneme;" onclick="PlayOneMe.run()" />
+  </statusbar>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="play-one-me-toolbar-button" label="Play One Me" tooltiptext="&runplayoneme;" oncommand="PlayOneMe.run()"/>
+  </toolbarpalette>
+</overlay>

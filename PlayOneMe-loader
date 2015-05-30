@@ -1,0 +1,21 @@
+#!/usr/bin/fish
+
+# This script reload the vlc
+
+set furl /tmp/PlayOneMeUrl
+echo > $furl
+
+set last (cat $furl)
+set kill false
+
+while true
+	set curr (cat $furl)
+	# echo "New Turn ($last) ($curr)"
+	if test "$curr" != "$last"
+		echo "Changed to $curr"
+		killall vlc
+		vlc -f -L "$curr" &
+		set last $curr
+	end
+	sleep 1
+end

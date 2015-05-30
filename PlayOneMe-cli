@@ -1,0 +1,11 @@
+#!/usr/bin/fish
+
+# This client send the url to the ip
+
+set furl /tmp/PlayOneMeCliUrl
+set furls /tmp/PlayOneMeUrl
+
+set ip (echo $argv | cut -f1 -d' ')
+echo $argv | grep "http.+" -oP > $furl
+
+scp "$furl" "$ip:$furls"

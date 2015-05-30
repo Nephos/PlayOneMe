@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#encoding: utf-8
+
+# This script receive a distant url
+
+require 'pry'
+require 'socket'
+
+server = TCPServer.new 8181
+loop do
+  client = server.accept
+  url = client.gets.to_s.chomp.split[1].to_s[1..-1]
+  client.close
+  puts "Received : #{url}"
+  File.write("/tmp/PlayOneMeUrl", url) if not url.empty?
+end

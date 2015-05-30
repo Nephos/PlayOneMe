@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow title="Play One Me Preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<prefpane label="Play One Me Preferences">
+  <preferences>
+    <preference id="play-one-me-autorun" name="extensions.playoneme.autorun" type="bool"/>
+    <preference id="play-one-me-ip" name="extensions.playoneme.ip" type="string"/>
+    <preference id="play-one-me-port" name="extensions.playoneme.port" type="string"/>
+  </preferences>
+
+  <groupbox>
+    <caption label="Settings"/>
+
+    <label control="autorun" value="Autorun"/>
+    <checkbox id="autorun" preference="play-one-me-autorun"/>
+
+    <label control="ip" value="IP"/>
+    <textbox id="ip" preference="play-one-me-ip"/>
+
+    <label control="port" value="PORT"/>
+    <textbox id="port" preference="play-one-me-port"/>
+
+  </groupbox>
+
+</prefpane>
+
+</prefwindow>

@@ -1,0 +1,8 @@
+content     playoneme    chrome/content/
+content     playoneme    chrome/content/ contentaccessible=yes
+overlay chrome://browser/content/browser.xul chrome://playoneme/content/browser.xul
+
+locale	playoneme	en-US	locale/en-US/
+
+skin	playoneme	classic/1.0	skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://playoneme/skin/skin.css
